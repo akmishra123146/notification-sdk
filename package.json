@@ -1,0 +1,19 @@
+{
+  "name": "@your-org/monorepo",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "node api.js && turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean && rm -rf node_modules"
+  },
+  "devDependencies": {
+    "turbo": "^1.11.3",
+    "typescript": "^5.3.3",
+    "tsup": "^8.0.1",
+    "vitest": "^1.2.1"
+  }
+}
